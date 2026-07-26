@@ -79,7 +79,7 @@ echo $InternPagesSelectBox .= " );\n";
 echo $PagesTitleSelectBox .= " );\n";
 
 //generate news lists
-$wblink_allowed_chars = "/[^ a-zA-Z0-9_äöüÄÖÜß!\"§$%&\/\(\)\[\]=\{\}\?\*#~+-;:,\.\'\`@€|]/";
+$wblink_allowed_chars = "/[\p{M}*]/i";
 $NewsItemsSelectBox = "var NewsItemsSelectBox = new Array();";
 $ModuleList = "var ModuleList = new Array();";
 
