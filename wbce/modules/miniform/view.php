@@ -320,6 +320,10 @@ $template = preg_replace('#\{(?=\S)(.*?)\}#s', '', $template);
 unset($var);
 unset($value);
 
+if (!function_exists('evalDroplets')) {
+    require_once WB_PATH."/modules/droplets/droplets.php";
+}
+evalDroplets($template);
 
 $spinner = '';
 if(!defined("spinnerloaded")) {
